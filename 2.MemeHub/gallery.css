@@ -13,8 +13,7 @@
     grid-gap: 1px;
     padding: 30px;
 }
-
-.gallery-item {
+.gallery-item {  
     height: 40%;
     width: 30%;
     border: 1px solid lightgray;
