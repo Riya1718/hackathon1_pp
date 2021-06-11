@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <div class="heading">
+    <h1>MemeHub</h1>
+  </div>
+  <div class="search">
+    <h2>Choose a Template : </h2>
+   </div>
+
+  <div class="main-canvas hide">
+    <div id = "canvas-context">
+        <canvas id="canvas" width="1200" height="600">
+        </canvas>    
+    </div>
+    <div id="textInputs">
+        <input type="text" id="first" onfocus="this.value=''" value="FIRST LINE OF TEXT">
+        <input type="button" id="b1" value="Enter" onclick="firstText()">
+        <input type="text" id="second" onfocus="this.value=''" value="SECOND LINE OF TEXT">
+        <input type="button" id="b2" value="Enter" onclick="secondText()">
+     </div>
+
+    <div id="save-btn">
+        <i class="far fa-save"></i>
+    </div>
+
+    <div id="show-media">
+        <i class="fas fa-photo-video"></i> 
+    </div>
+</div>
+    <div class="templates">
+        <div class="temp1">
+            <div class="image">
+            <img src="imgs/Angry-Baby.jpg" alt="">
+            </div>
+            <div class="title">Angry Baby</div>
+        </div>
+        <div class="temp2">
+            <div class="image">
+            <img src="imgs/doge.jpg" alt="">
+            </div>
+            <div class="title">Doge</div>
+        </div>
+        <div class="temp3">
+            <div class="image">
+            <img src="imgs/bas-karo-meme-template.jpg" alt="">
+            </div>
+            <div class="title">Bas Karo</div>
+        </div>
+        <div class="temp4">
+            <div class="image">
+            <img src="imgs/Evil-Toddler.jpg" alt="">
+            </div>
+            <div class="title">Evil-Toddler</div>
+        </div>
+        <div class="temp5">
+            <div class="image">
+            <img src="imgs/First-World-Problems.jpg" alt="">
+           </div>
+            <div class="title">First-World-Problems</div>
+        </div>
+        <div class="temp6">
+            <div class="image">
+            <img src="imgs/Will-Smith-Crying-meme-template.jpg" alt="">
+            </div>
+            <div class="title">Will Smith Crying</div>
+        </div>
+        <div class="temp7">
+            <div class="image">
+            <img src="imgs/laughing.jpg" alt="">
+            </div>
+            <div class="title">Laughing Leo</div>
+        </div>
+        <div class="temp8">
+            <div class="image">
+            <img src="imgs/monkey.jpg" alt="">
+            </div>
+            <div class="title">Monkey</div>
+        </div>
+        <div class="temp9">
+            <div class="image">
+            <img src="imgs/pissed off.jpg" alt="">
+            </div>
+            <div class="title">Pissed-Off</div>
+        </div>
+        <div class="temp10">
+            <div class="image">
+            <img src="imgs/sad.jpg" alt="">
+            </div>
+            <div class="title">Sad</div>
+        </div>
+        <div class="temp11">
+            <div class="image">
+            <img src="imgs/shocked cat.jpg" alt="">
+            </div>
+            <div class="title">Shocked-Cat</div>
+        </div>
+        <div class="temp12">
+            <div class="image">
+            <img src="imgs/shocking.jpg" alt="">
+            </div>
+            <div class="title">Shocking</div>
+        </div>
+        <div class="temp13">
+            <div class="image">
+            <img src="imgs/Success-Kid.jpg" alt="">
+            </div>
+            <div class="title">Success-Kid</div>
+        </div>
+        <div class="temp14">
+            <div class="image">
+            <img src="imgs/Surprised Pikachu.jpg" alt="">
+            </div>
+            <div class="title">Surprised-Pikachu</div>
+        </div>
+        <div class="temp15">
+            <div class="image">
+            <img src="imgs/annoyed.jpg" alt="">
+            </div>
+            <div class="title">Annoyed</div>
+        </div>
+        <div class="temp16">
+            <div class="image">
+            <img src="imgs/Big Dog Small Dog.png" alt="">
+            </div>
+            <div class="title">Big-Dog-Small-Dog</div>
+        </div>
+        <div class="temp17">
+            <div class="image">
+            <img src="imgs/cat.jpg" alt="">
+            </div>
+            <div class="title">Cat</div>
+        </div>
+        <div class="temp18">
+            <div class="image">
+            <img src="imgs/confused.jpg" alt="">
+            </div>
+            <div class="title">Confused</div>
+        </div>
+        <div class="temp19">
+            <div class="image">
+            <img src="imgs/Cute-Cat.jpg" alt="">
+            </div>
+            <div class="title">Cute-Cat</div>
+        </div>
+        <div class="temp20">
+            <div class="image">
+            <img src="imgs/blank-meme-template-045-shocked-kevin-hart.jpg" alt="">
+             </div>
+            <div class="title">Shocked Kevin Hart</div>
+       </div>   
+    </div>
+
+    <div class="footer"></div>
+  
+    <script src="script.js"></script>
+    <script src="./db.js"></script>
+    <script src="mediaUtil.js"></script>
+</body>
+</html>
